@@ -5,3 +5,14 @@
 #footer-wrap{
     color: #FFFFFF;
 }
+
+#nav #he-plugin-simple{
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 15%);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#nav #he-plugin-simple, #page-header.nav-fixed #nav #toggle-menu {
+    color: var(--font-color);
+    text-shadow: none;
+}

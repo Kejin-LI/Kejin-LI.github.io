@@ -2,13 +2,13 @@
  var titleTime;
  document.addEventListener('visibilitychange', function () {
      if (document.hidden) {
-         $('[rel="icon"]').attr('href', "/joke.ico");
-         document.title = '看不见我🙈~看不见我🙈~';
+         $('[rel="icon"]').attr('href', "/img/profile.png");
+         document.title = '你的身份证落我这了🙈~';
          clearTimeout(titleTime);
      }
      else {
-         $('[rel="icon"]').attr('href', "/favicon.ico");
-         document.title = ' ( ๑•̀ㅂ•́) ✧被发现了～';
+         $('[rel="icon"]').attr('href', "/img/profile.png");
+         document.title = ' 哈哈上当了吧( ๑•̀ㅂ•́) ✧';
          titleTime = setTimeout(function () {
              document.title = OriginTitle;
          }, 2000);

@@ -3,7 +3,7 @@
  document.addEventListener('visibilitychange', function () {
      if (document.hidden) {
          $('[rel="icon"]').attr('href', "/img/profile.png");
-         document.title = '⚠️对方正在挖掘你的秘密🙈...';
+         document.title = '⚠️对方正在偷窥你的秘密🙈...';
          clearTimeout(titleTime);
      }
      else {

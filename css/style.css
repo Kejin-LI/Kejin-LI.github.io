@@ -110,12 +110,83 @@
 }
 
 
-
-
-
-
-
 .loading-img {
   background: url(/img/profile.png) no-repeat center center;
   background-size: cover;
+}
+
+@font-face{
+  font-family:'NewFont' ;  /* 字体名自定义即可 */
+  src:url('/fonts/font3.ttf'); /* 字体文件路径 */
+  font-display : swap;
+}
+
+h1#site-title {
+  font-family: 'NewFont', sans-serif;
+}
+
+
+/* 头像呼吸灯 */
+[data-theme="light"] .avatar-img {
+  animation: huxi_light 4s ease-in-out infinite;
+}
+[data-theme="dark"] .avatar-img {
+  animation: huxi_dark 4s ease-in-out infinite;
+}
+@keyframes huxi_light {
+  0% {
+    box-shadow: 0px 0px 1px 1px #e5f2ff;
+  }
+  50% {
+    box-shadow: 0px 0px 5px 5px #e5f2ff;
+  }
+  100% {
+    box-shadow: 0px 0px 1px 1px #e5f2ff;
+  }
+}
+@keyframes huxi_dark {
+  0% {
+    box-shadow: 0px 0px 1px 1px #99ccff;
+  }
+  50% {
+    box-shadow: 0px 0px 5px 5px #99ccff;
+  }
+  100% {
+    box-shadow: 0px 0px 1px 1px #99ccff;
+  }
+}
+
+/* Twikoo评论框高度设置 */
+.el-textarea__inner {
+    min-height: 150px !important;
+  }
+
+/* Twikoo评论框添加背景图
+.el-textarea {
+	background-image: url(https://s2.loli.net/2022/02/06/gy6AcWI4MTjrNVx.gif);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+	background-color: rgba(0, 0, 255, 0);
+	resize: vertical
+}
+*/
+
+/* Twikoo评论框背景图实现点击下移
+.el-textarea:focus-within {
+	background-position-y: 800px;
+	transition: all 0.2s ease-in-out 0s;
+}
+*/
+
+/* 背景 */
+#web_bg {
+  /* webkit内核 5.1 - 6.0 */
+  background: -webkit-linear-gradient(left, #F6E6F7, #E2E0F2);
+  /* Opera 11.1 - 12.0 */
+  background: -o-linear-gradient(right, #F6E6F7, #E2E0F2);
+  /* Firefox 3.6 - 15 */
+  background: -moz-linear-gradient(right, #F6E6F7, #E2E0F2);
+  /* 标准的语法 */
+  background: linear-gradient(to right, #F6E6F7, #E2E0F2);
 }

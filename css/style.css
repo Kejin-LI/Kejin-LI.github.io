@@ -1,3 +1,7 @@
+#page-header #site-title {
+    font-size: 3em;
+}
+
 #footer{
     background: transparent;
 }
@@ -162,6 +166,8 @@ h1#site-title {
   }
 
 /* Twikoo评论框添加背景图
+小女孩吹空调：background-image: url(https://raw.githubusercontent.com/drew233/cdn/master/20200409110727.webp)
+*/
 .el-textarea {
 	background-image: url(https://s2.loli.net/2022/02/06/gy6AcWI4MTjrNVx.gif);
 	background-size: contain;
@@ -170,7 +176,7 @@ h1#site-title {
 	background-color: rgba(0, 0, 255, 0);
 	resize: vertical
 }
-*/
+
 
 /* Twikoo评论框背景图实现点击下移
 .el-textarea:focus-within {
@@ -179,14 +185,44 @@ h1#site-title {
 }
 */
 
-/* 背景 */
+/* 背景
 #web_bg {
-  /* webkit内核 5.1 - 6.0 */
+
   background: -webkit-linear-gradient(left, #F6E6F7, #E2E0F2);
-  /* Opera 11.1 - 12.0 */
+
   background: -o-linear-gradient(right, #F6E6F7, #E2E0F2);
-  /* Firefox 3.6 - 15 */
+
   background: -moz-linear-gradient(right, #F6E6F7, #E2E0F2);
-  /* 标准的语法 */
+
   background: linear-gradient(to right, #F6E6F7, #E2E0F2);
 }
+*/
+
+
+/* 背景宇宙星光  */
+#universe{
+  display: block;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 日间模式卡片页面调整 */
+[data-theme=light] {
+    --card-bg: rgba(255,255,255,.9) !important; /* 全局背景调整 */
+}
+
+/* 夜间模式页面调整 */
+[data-theme=dark] {
+    --card-bg: rgba(26, 27, 29, .9) !important; /* 全局背景调整 */
+    --btn-bg: #012c48 !important; /* 页面所有按钮夜间背景色 */
+}
+

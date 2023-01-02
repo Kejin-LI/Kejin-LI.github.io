@@ -162,7 +162,7 @@ h1#site-title {
 
 /* Twikoo评论框高度设置 */
 .el-textarea__inner {
-    min-height: 150px !important;
+    min-height: 100px !important;
   }
 
 /* Twikoo评论框添加背景图

@@ -217,12 +217,16 @@ h1#site-title {
 
 /* 日间模式卡片页面调整 */
 [data-theme=light] {
-    --card-bg: rgba(255,255,255,.9) !important; /* 全局背景调整 */
+    --card-bg: rgba(255,255,255,.8) !important; /* 全局背景调整 */
 }
 
 /* 夜间模式页面调整 */
 [data-theme=dark] {
-    --card-bg: rgba(26, 27, 29, .9) !important; /* 全局背景调整 */
+
+    --card-bg: rgba(26, 27, 29, .8) !important; /* 全局背景调整 */
     --btn-bg: #012c48 !important; /* 页面所有按钮夜间背景色 */
 }
 
+[data-theme=dark] #web_bg{
+    background-image: url(/img/dark_banner.png);
+}

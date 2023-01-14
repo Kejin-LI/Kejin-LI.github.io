@@ -399,20 +399,157 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
   content: '\f863';
 
 
-/* 导航栏居中 */
-#nav .menus_items {
-    /* display: inline; 这个带不带都可以，本来就是inline */
+/* 一键回到顶部，挂件设置 */
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+.neko {
+    width: 64px;
+    height: 64px;
+    /* background-image: url("https://bu.dusays.com/2022/07/20/62d812db74be9.png");*/
+    background-image: url("source/img/keji.png");
     position: absolute;
-    width: fit-content;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 32px!important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateX(50%);
+    cursor: pointer;
+    font-family: 'NewFont';
+    font-weight: 600;
+    font-size: 16px;
+    color: #6f42c1;
+    display: none;
 }
 
-#nav .menus_items .menus_item:hover .menus_item_child{
-  display: flex;
+.neko::after {
+    display: none;
+    width: 100px;
+    height: 100px;
+    /* background-image: url("https://bu.dusays.com/2022/07/20/62d812d95e6f5.png");*/
+    background-image: url("source/img/keji.png");
+    background-size: contain;
+    z-index: 9999;
+    position: absolute;
+    right: 50%;
+    text-align: center;
+    line-height: 100px;
+    top: -115%;
+
 }
 
-/* 这里的2是代表导航栏的第二个元素，即有子菜单的元素，可以按自己需求修改 */
-.menus_items .menus_item:nth-child(2) .menus_item_child {
-    left: -65px;
+.neko.showMsg::after {
+    content: attr(data-msg);
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.neko:hover::after {
+    content: attr(data-msg);
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.neko.fontColor::after {
+    color: #333;
+}
+
+
+@media screen and (max-width:992px) {
+    ::-webkit-scrollbar {
+        width: 8px !important;
+        height: 8px !important
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 2em;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(255 255 255 / .3);
+        background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
+        border-radius: 2em
+    }
+
+    ::-webkit-scrollbar-corner {
+        background-color: transparent
+    }
+}
+
+/* aplayer播放器魔改 */
+/* 颜色 */
+:root {
+  --music-theme-op: #4259ef23;
+  --music-main-op-deep: var(--music-theme-op-deep) !important;
+  --music-white: #fff;
+  --music-white-op: rgba(255, 255, 255, 0.2);
+  --music-none: rgba(0, 0, 0, 0);
+  --music-main: var(--music-theme);
+  --music-main-op: var(--music-theme-op);
+  --music-shadow-main: 0 8px 12px -3px var(--music-main-op);
+  --music-shadow-theme: 0 8px 12px -3px var(--music-theme-op);
+  --music-shadow-border: 0 8px 16px -4px #2c2d300c;
+  --style-border: 1px solid var(--music-card-border);
+  --style-border-hover: 1px solid var(--music-main);
+  --style-border-none: 1px solid transparent;
+  --music-main-none: #b8b8b800 !important;
+  --style-border-always: 1px solid var(--music-card-border);
+  --music-gray-op: #9999992b;
+}
+
+[data-theme="light"] {
+  --music-theme: #3b70fc;
+  --music-theme-op-deep: #4259efdd;
+  --music-fontcolor: #363636;
+  --music-background: #f7f9fe;
+  --music-card-border: #e3e8f7;
+  --music-theme-op: #4259ef23;
+  --music-secondbg: #f1f3f8;
+  --music-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0);
+  --music-card-bg: #fff;
+}
+
+[data-theme="dark"] {
+  --music-theme: #0084ff;
+  --music-theme-op-deep: #0084ffdd;
+  --music-fontcolor: #f7f7fa;
+  --music-background: #18171d;
+  --music-card-border: #42444a;
+  --music-theme-op: #0084ff23;
+  --music-secondbg: #30343f;
+  --music-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0);
+  --music-card-bg: #1d1b26;
+}
+
+
+
+
+/* 翻页按钮居中 */
+#pagination {
+  width: 100%;
+  margin: auto;
+}
+
+/* 夜间模式菜单栏发光字 */
+[data-theme="dark"] #nav .site-page,
+[data-theme="dark"] #nav .menus_items .menus_item .menus_item_child li a {
+  text-shadow: 0 0 2px rgb(179, 71, 241) !important;
+}
+
+/* 手机端适配 */
+[data-theme="dark"] #sidebar #sidebar-menus .menus_items .site-page {
+  text-shadow: 0 0 2px #99ccff !important;
+}
+
+/* 闪烁变动颜色连续渐变 */
+#site-name,
+#site-title,
+#site-subtitle,
+#post-info,
+.author-info__name,
+.author-info__description {
+  transition: text-shadow 1s linear !important;
 }

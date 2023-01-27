@@ -225,7 +225,7 @@ h1#site-title {
 [data-theme=dark] {
 
     --card-bg: rgba(26, 27, 29, .8) !important; /* 全局背景调整 */
-    --btn-bg: #012c48 !important; /* 页面所有按钮夜间背景色 */
+    --btn-bg: #62B5EC !important; /* 页面所有按钮夜间背景色 */
 }
 
 [data-theme=dark] #web_bg{
@@ -553,3 +553,7 @@ body::-webkit-scrollbar {
 .author-info__description {
   transition: text-shadow 1s linear !important;
 }
+
+/* 关于 */
+
+

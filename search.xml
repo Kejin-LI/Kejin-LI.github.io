@@ -18,6 +18,14 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> 影视剧 </tag>
+            
+            <tag> 科幻 </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -37,6 +45,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> 测试2 </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -51,10 +65,16 @@
       
       <categories>
           
-          <category> 测试2 </category>
+          <category> 生活杂谈 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> 测试1 </tag>
+            
+        </tags>
       
     </entry>
     

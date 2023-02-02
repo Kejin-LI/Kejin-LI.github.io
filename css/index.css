@@ -6776,7 +6776,6 @@ blockquote.pullquote.right {
     /* border-radius: 0; */
     padding: 0 1rem !important;
     box-shadow: none !important;
-    background: var(--music-background);
   }
   .author-content-item .card-content .banner-button-group .banner-button-text {
     display: none;
